@@ -24,9 +24,5 @@ Single-page e-commerce website built with **React** and **Firebase**.
 ## 🔐 Admin Panel
 Hidden admin panel with authentication (demo access available on request).
 
-## 📸 Screenshots
-![header](image.png)
-![shop](image-1.png)
-
 ## 👨‍💻 Author
 Vadym Voitsehivskyi
