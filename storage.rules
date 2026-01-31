@@ -1,0 +1,20 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAdmin() {
+      return request.auth != null && request.auth.uid == "mwM4jv3EN4hSCwL5mACyMBGt4YH2";
+    }
+
+    // Картинки товарів
+    match /products/{allPaths=**} {
+      allow read: if true;        // сайт може показувати фото
+      allow write: if isAdmin();  // завантажувати/видаляти може тільки адмін
+    }
+
+    // Все інше заборонено
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
